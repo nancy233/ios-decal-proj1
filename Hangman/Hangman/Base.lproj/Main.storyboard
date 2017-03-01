@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="33m-bG-32Y">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="33m-bG-32Y">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,14 +18,398 @@
                         <viewControllerLayoutGuide type="bottom" id="Rkb-O3-rip"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xKS-yl-l6T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="hangman1" translatesAutoresizingMaskIntoConstraints="NO" id="eCy-01-3Fc">
+                                <rect key="frame" x="67" y="35" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezd-lU-vXY">
+                                <rect key="frame" x="16" y="196" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBx-cR-fAB">
+                                <rect key="frame" x="16" y="353" width="50" height="30"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="Gdf-rz-cQc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-eu-CxY">
+                                <rect key="frame" x="64" y="353" width="50" height="30"/>
+                                <state key="normal" title="B">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="Sci-71-bej"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg7-Qs-jq0">
+                                <rect key="frame" x="118" y="353" width="50" height="30"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="zOc-c7-9nq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk2-a9-4Ps">
+                                <rect key="frame" x="166" y="353" width="50" height="30"/>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="SRq-z5-JcG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lX-fn-f5t">
+                                <rect key="frame" x="16" y="391" width="50" height="30"/>
+                                <state key="normal" title="H">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="q3d-K2-ydM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYz-JN-n9T">
+                                <rect key="frame" x="64" y="391" width="50" height="30"/>
+                                <state key="normal" title="I">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="bbe-M9-f5k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY2-48-pPx">
+                                <rect key="frame" x="118" y="391" width="50" height="30"/>
+                                <state key="normal" title="J">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="4lK-di-51l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-DR-pUl">
+                                <rect key="frame" x="166" y="391" width="50" height="30"/>
+                                <state key="normal" title="K">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="yHe-mb-VK2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwu-8x-aES">
+                                <rect key="frame" x="16" y="429" width="50" height="30"/>
+                                <state key="normal" title="O">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="pcF-K6-IWC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpJ-sG-Ddx">
+                                <rect key="frame" x="64" y="429" width="50" height="30"/>
+                                <state key="normal" title="P">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="TIR-oe-cv4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjg-3o-AyO">
+                                <rect key="frame" x="118" y="429" width="50" height="30"/>
+                                <state key="normal" title="Q">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="kUv-iI-VT3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q37-hG-x3G">
+                                <rect key="frame" x="166" y="429" width="50" height="30"/>
+                                <state key="normal" title="R">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="pRG-Kd-loP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBf-54-Njq">
+                                <rect key="frame" x="211" y="353" width="50" height="30"/>
+                                <state key="normal" title="E">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="FHN-Ud-D9p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-WL-OPK">
+                                <rect key="frame" x="265" y="353" width="50" height="30"/>
+                                <state key="normal" title="F">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="7cb-29-2In"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uof-hB-MCy">
+                                <rect key="frame" x="313" y="353" width="50" height="30"/>
+                                <state key="normal" title="G">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="L3c-op-yVO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Y-Hv-MSp">
+                                <rect key="frame" x="211" y="391" width="50" height="30"/>
+                                <state key="normal" title="L">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="usI-c7-Nhr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzf-Fb-qEg">
+                                <rect key="frame" x="265" y="391" width="50" height="30"/>
+                                <state key="normal" title="M">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="kpe-Ls-R3u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnX-Ei-VCs">
+                                <rect key="frame" x="313" y="391" width="50" height="30"/>
+                                <state key="normal" title="N">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="vLB-E1-Ute"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auv-EV-Xq4">
+                                <rect key="frame" x="211" y="429" width="50" height="30"/>
+                                <state key="normal" title="S">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="jkB-A4-hI7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xc-9h-xkZ">
+                                <rect key="frame" x="64" y="467" width="50" height="30"/>
+                                <state key="normal" title="V">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="Qyk-nY-4aG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3w-Tj-KQ5">
+                                <rect key="frame" x="166" y="467" width="50" height="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="RHL-O9-IoQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-oe-WGC">
+                                <rect key="frame" x="211" y="467" width="50" height="30"/>
+                                <state key="normal" title="Y">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="KCu-fH-8V1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKl-HP-tJD">
+                                <rect key="frame" x="265" y="467" width="50" height="30"/>
+                                <state key="normal" title="Z">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="YNI-NY-rIt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGa-8a-Y1f">
+                                <rect key="frame" x="265" y="429" width="50" height="30"/>
+                                <state key="normal" title="T">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="SY4-zg-RVP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esS-9T-XOW">
+                                <rect key="frame" x="313" y="429" width="50" height="30"/>
+                                <state key="normal" title="U">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="VWF-kg-YbX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-BX-JIk">
+                                <rect key="frame" x="118" y="467" width="50" height="30"/>
+                                <state key="normal" title="W">
+                                    <color key="titleColor" red="0.17723674332988815" green="0.58759119187617204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="9TK-eS-w36"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press A Letter To Guess!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7e-5w-hWf">
+                                <rect key="frame" x="92" y="295" width="190" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.28046687796891023" green="1" blue="0.20441548532302112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.39721747119835327" green="0.56668217756399097" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incorrect Guesses: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nv-vl-RRE">
+                                <rect key="frame" x="16" y="248" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.29632564245808102" blue="0.26659172754381777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-SD-CJc">
+                                <rect key="frame" x="132" y="548" width="110" height="30"/>
+                                <state key="normal" title="StartOver">
+                                    <color key="titleColor" red="0.18819883844661778" green="0.70734987400303795" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restart:" destination="33m-bG-32Y" eventType="touchUpInside" id="Gd6-R3-voX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98208724744805753" green="0.99253835178969962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ngd-WL-OPK" firstAttribute="centerY" secondItem="Uof-hB-MCy" secondAttribute="centerY" id="08D-56-hRz"/>
+                            <constraint firstItem="6ax-BX-JIk" firstAttribute="centerY" secondItem="o3w-Tj-KQ5" secondAttribute="centerY" id="20B-go-0jG"/>
+                            <constraint firstItem="0xc-9h-xkZ" firstAttribute="centerY" secondItem="6ax-BX-JIk" secondAttribute="centerY" id="33Q-NG-1Pr"/>
+                            <constraint firstItem="Ngd-WL-OPK" firstAttribute="leading" secondItem="NBf-54-Njq" secondAttribute="trailing" constant="8" id="4t8-zg-39W"/>
+                            <constraint firstItem="NBf-54-Njq" firstAttribute="leading" secondItem="wk2-a9-4Ps" secondAttribute="trailing" constant="8" id="9Qu-d0-NaY"/>
+                            <constraint firstItem="iF5-eu-CxY" firstAttribute="leading" secondItem="KBx-cR-fAB" secondAttribute="trailing" constant="8" id="ALB-9g-Tmb"/>
+                            <constraint firstItem="A0Y-Hv-MSp" firstAttribute="centerY" secondItem="Zzf-Fb-qEg" secondAttribute="centerY" id="AYE-Bj-66r"/>
+                            <constraint firstItem="SGa-8a-Y1f" firstAttribute="top" secondItem="Zzf-Fb-qEg" secondAttribute="bottom" constant="8" id="Bq3-Cn-4NV"/>
+                            <constraint firstItem="NBf-54-Njq" firstAttribute="centerY" secondItem="Ngd-WL-OPK" secondAttribute="centerY" id="CNr-eM-yfI"/>
+                            <constraint firstItem="esS-9T-XOW" firstAttribute="centerX" secondItem="Uof-hB-MCy" secondAttribute="centerX" id="Cta-Kn-Ah5"/>
+                            <constraint firstItem="xKl-HP-tJD" firstAttribute="centerX" secondItem="Ngd-WL-OPK" secondAttribute="centerX" id="CzI-dG-RwX"/>
+                            <constraint firstItem="pjg-3o-AyO" firstAttribute="top" secondItem="ZY2-48-pPx" secondAttribute="bottom" constant="8" id="DEd-pA-KXc"/>
+                            <constraint firstItem="q37-hG-x3G" firstAttribute="top" secondItem="7oX-DR-pUl" secondAttribute="bottom" constant="8" id="EXw-Vt-HBE"/>
+                            <constraint firstItem="7oX-DR-pUl" firstAttribute="centerY" secondItem="A0Y-Hv-MSp" secondAttribute="centerY" id="Ec3-kP-QHm"/>
+                            <constraint firstItem="KBx-cR-fAB" firstAttribute="centerY" secondItem="iF5-eu-CxY" secondAttribute="centerY" id="ErZ-56-Hwm"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="6ax-BX-JIk" secondAttribute="bottom" constant="170" id="FFq-xA-HrX"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="xKl-HP-tJD" secondAttribute="bottom" constant="170" id="FVd-VZ-XI0"/>
+                            <constraint firstItem="RnX-Ei-VCs" firstAttribute="top" secondItem="Uof-hB-MCy" secondAttribute="bottom" constant="8" id="Fcy-0b-qEn"/>
+                            <constraint firstItem="aYz-JN-n9T" firstAttribute="top" secondItem="iF5-eu-CxY" secondAttribute="bottom" constant="8" id="FjP-vp-p2R"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="vWQ-oe-WGC" secondAttribute="bottom" constant="170" id="HNO-ic-7aI"/>
+                            <constraint firstItem="pjg-3o-AyO" firstAttribute="centerY" secondItem="q37-hG-x3G" secondAttribute="centerY" id="Ip2-k7-qYZ"/>
+                            <constraint firstItem="Zzf-Fb-qEg" firstAttribute="centerY" secondItem="RnX-Ei-VCs" secondAttribute="centerY" id="ItK-Fb-K8H"/>
+                            <constraint firstItem="eCy-01-3Fc" firstAttribute="top" secondItem="fga-sG-nzY" secondAttribute="bottom" constant="15" id="JeY-fW-TYa"/>
+                            <constraint firstItem="Yg7-Qs-jq0" firstAttribute="leading" secondItem="iF5-eu-CxY" secondAttribute="trailing" constant="8" id="Kum-xA-2El"/>
+                            <constraint firstItem="wk2-a9-4Ps" firstAttribute="centerY" secondItem="NBf-54-Njq" secondAttribute="centerY" id="L1a-oI-mhh"/>
+                            <constraint firstItem="lUQ-SD-CJc" firstAttribute="centerX" secondItem="xKS-yl-l6T" secondAttribute="centerX" id="LJO-aI-Bwt"/>
+                            <constraint firstItem="SGa-8a-Y1f" firstAttribute="centerY" secondItem="esS-9T-XOW" secondAttribute="centerY" id="N4o-vQ-Vae"/>
+                            <constraint firstItem="7oX-DR-pUl" firstAttribute="top" secondItem="wk2-a9-4Ps" secondAttribute="bottom" constant="8" id="OH4-hs-Pmb"/>
+                            <constraint firstItem="ZY2-48-pPx" firstAttribute="top" secondItem="Yg7-Qs-jq0" secondAttribute="bottom" constant="8" id="PFO-56-9KU"/>
+                            <constraint firstItem="Uof-hB-MCy" firstAttribute="leading" secondItem="Ngd-WL-OPK" secondAttribute="trailing" constant="8" id="Q1u-Bu-Tvh"/>
+                            <constraint firstItem="SGa-8a-Y1f" firstAttribute="centerX" secondItem="Ngd-WL-OPK" secondAttribute="centerX" id="QD6-de-HRU"/>
+                            <constraint firstItem="q37-hG-x3G" firstAttribute="centerY" secondItem="Auv-EV-Xq4" secondAttribute="centerY" id="QJS-SM-huB"/>
+                            <constraint firstItem="Rwu-8x-aES" firstAttribute="centerX" secondItem="KBx-cR-fAB" secondAttribute="centerX" id="SGa-e9-4VF"/>
+                            <constraint firstItem="ZY2-48-pPx" firstAttribute="centerX" secondItem="Yg7-Qs-jq0" secondAttribute="centerX" id="T3n-bF-jb2"/>
+                            <constraint firstItem="wk2-a9-4Ps" firstAttribute="leading" secondItem="Yg7-Qs-jq0" secondAttribute="trailing" constant="8" id="TEU-Yh-DKy"/>
+                            <constraint firstItem="6lX-fn-f5t" firstAttribute="centerX" secondItem="KBx-cR-fAB" secondAttribute="centerX" id="Tf2-Bu-oGa"/>
+                            <constraint firstItem="7oX-DR-pUl" firstAttribute="centerX" secondItem="wk2-a9-4Ps" secondAttribute="centerX" id="ThH-Ft-mO2"/>
+                            <constraint firstItem="wk2-a9-4Ps" firstAttribute="centerX" secondItem="xKS-yl-l6T" secondAttribute="centerX" id="UPL-3N-sr1"/>
+                            <constraint firstItem="6ax-BX-JIk" firstAttribute="top" secondItem="pjg-3o-AyO" secondAttribute="bottom" constant="8" id="VEB-Ea-oLb"/>
+                            <constraint firstItem="KpJ-sG-Ddx" firstAttribute="top" secondItem="aYz-JN-n9T" secondAttribute="bottom" constant="8" id="WR4-tf-PKc"/>
+                            <constraint firstItem="q37-hG-x3G" firstAttribute="centerX" secondItem="wk2-a9-4Ps" secondAttribute="centerX" id="WS2-d2-Rd6"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="o3w-Tj-KQ5" secondAttribute="bottom" constant="170" id="WoV-4B-Wxe"/>
+                            <constraint firstItem="o3w-Tj-KQ5" firstAttribute="top" secondItem="q37-hG-x3G" secondAttribute="bottom" constant="8" id="YjV-CS-ieE"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="0xc-9h-xkZ" secondAttribute="bottom" constant="170" id="ZwB-1T-Y0j"/>
+                            <constraint firstItem="Auv-EV-Xq4" firstAttribute="top" secondItem="A0Y-Hv-MSp" secondAttribute="bottom" constant="8" id="Zxk-q7-xOI"/>
+                            <constraint firstItem="vWQ-oe-WGC" firstAttribute="centerX" secondItem="NBf-54-Njq" secondAttribute="centerX" id="acO-WH-alu"/>
+                            <constraint firstItem="aYz-JN-n9T" firstAttribute="centerY" secondItem="ZY2-48-pPx" secondAttribute="centerY" id="b4O-Mm-Xjp"/>
+                            <constraint firstItem="Auv-EV-Xq4" firstAttribute="centerX" secondItem="NBf-54-Njq" secondAttribute="centerX" id="bGI-Pr-1aM"/>
+                            <constraint firstItem="A0Y-Hv-MSp" firstAttribute="centerX" secondItem="NBf-54-Njq" secondAttribute="centerX" id="bYQ-kw-fvf"/>
+                            <constraint firstItem="6lX-fn-f5t" firstAttribute="centerY" secondItem="aYz-JN-n9T" secondAttribute="centerY" id="d6D-j0-VdD"/>
+                            <constraint firstItem="iF5-eu-CxY" firstAttribute="centerY" secondItem="Yg7-Qs-jq0" secondAttribute="centerY" id="ddd-uP-Sbq"/>
+                            <constraint firstItem="vWQ-oe-WGC" firstAttribute="centerY" secondItem="xKl-HP-tJD" secondAttribute="centerY" id="dhZ-YC-wQy"/>
+                            <constraint firstItem="KpJ-sG-Ddx" firstAttribute="centerX" secondItem="iF5-eu-CxY" secondAttribute="centerX" id="e2v-Kx-oEd"/>
+                            <constraint firstItem="Rwu-8x-aES" firstAttribute="centerY" secondItem="KpJ-sG-Ddx" secondAttribute="centerY" id="eGo-aQ-EUb"/>
+                            <constraint firstItem="Zzf-Fb-qEg" firstAttribute="top" secondItem="Ngd-WL-OPK" secondAttribute="bottom" constant="8" id="elG-uX-HXD"/>
+                            <constraint firstItem="aYz-JN-n9T" firstAttribute="centerX" secondItem="iF5-eu-CxY" secondAttribute="centerX" id="gkz-TC-Asj"/>
+                            <constraint firstItem="A0Y-Hv-MSp" firstAttribute="top" secondItem="NBf-54-Njq" secondAttribute="bottom" constant="8" id="hQk-iq-jIX"/>
+                            <constraint firstItem="pjg-3o-AyO" firstAttribute="centerX" secondItem="Yg7-Qs-jq0" secondAttribute="centerX" id="hbr-4U-BpE"/>
+                            <constraint firstItem="Rwu-8x-aES" firstAttribute="top" secondItem="6lX-fn-f5t" secondAttribute="bottom" constant="8" id="hzc-EQ-imu"/>
+                            <constraint firstItem="Zzf-Fb-qEg" firstAttribute="centerX" secondItem="Ngd-WL-OPK" secondAttribute="centerX" id="ihD-cP-BfC"/>
+                            <constraint firstItem="Auv-EV-Xq4" firstAttribute="centerY" secondItem="SGa-8a-Y1f" secondAttribute="centerY" id="jOF-Q7-hKQ"/>
+                            <constraint firstItem="6lX-fn-f5t" firstAttribute="top" secondItem="KBx-cR-fAB" secondAttribute="bottom" constant="8" id="lvr-SA-Dty"/>
+                            <constraint firstItem="Yg7-Qs-jq0" firstAttribute="centerY" secondItem="wk2-a9-4Ps" secondAttribute="centerY" id="mbo-iR-JzB"/>
+                            <constraint firstItem="o3w-Tj-KQ5" firstAttribute="centerY" secondItem="vWQ-oe-WGC" secondAttribute="centerY" id="nEw-uo-aiw"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="lUQ-SD-CJc" secondAttribute="bottom" constant="89" id="npG-mD-yjm"/>
+                            <constraint firstItem="ZY2-48-pPx" firstAttribute="centerY" secondItem="7oX-DR-pUl" secondAttribute="centerY" id="pBb-HC-eF6"/>
+                            <constraint firstItem="xKl-HP-tJD" firstAttribute="top" secondItem="SGa-8a-Y1f" secondAttribute="bottom" constant="8" id="pyv-0H-wjZ"/>
+                            <constraint firstItem="eCy-01-3Fc" firstAttribute="centerX" secondItem="xKS-yl-l6T" secondAttribute="centerX" id="qLA-ez-SEO"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="esS-9T-XOW" secondAttribute="bottom" constant="208" id="s7R-Nj-qL7"/>
+                            <constraint firstItem="0xc-9h-xkZ" firstAttribute="centerX" secondItem="iF5-eu-CxY" secondAttribute="centerX" id="szv-M4-xJm"/>
+                            <constraint firstItem="6ax-BX-JIk" firstAttribute="centerX" secondItem="Yg7-Qs-jq0" secondAttribute="centerX" id="tjY-zg-j5a"/>
+                            <constraint firstItem="RnX-Ei-VCs" firstAttribute="centerX" secondItem="Uof-hB-MCy" secondAttribute="centerX" id="tyU-LS-vJG"/>
+                            <constraint firstItem="esS-9T-XOW" firstAttribute="top" secondItem="RnX-Ei-VCs" secondAttribute="bottom" constant="8" id="ura-qo-omm"/>
+                            <constraint firstItem="o3w-Tj-KQ5" firstAttribute="centerX" secondItem="wk2-a9-4Ps" secondAttribute="centerX" id="wOz-LA-Og4"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="Rwu-8x-aES" secondAttribute="bottom" constant="208" id="wwd-vZ-NNw"/>
+                            <constraint firstItem="0xc-9h-xkZ" firstAttribute="top" secondItem="KpJ-sG-Ddx" secondAttribute="bottom" constant="8" id="wxC-sD-0ld"/>
+                            <constraint firstItem="vWQ-oe-WGC" firstAttribute="top" secondItem="Auv-EV-Xq4" secondAttribute="bottom" constant="8" id="zFg-lj-pgf"/>
+                            <constraint firstItem="KpJ-sG-Ddx" firstAttribute="centerY" secondItem="pjg-3o-AyO" secondAttribute="centerY" id="zhc-MF-dOD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hangmanImage" destination="eCy-01-3Fc" id="ewr-m2-AYu"/>
+                        <outlet property="incorrect" destination="7Nv-vl-RRE" id="sQa-AI-RzW"/>
+                        <outlet property="phraseStatus" destination="Ezd-lU-vXY" id="WZc-64-1MP"/>
+                        <outletCollection property="letterButtons" destination="Zzf-Fb-qEg" collectionClass="NSMutableArray" id="5uk-br-3Zs"/>
+                        <outletCollection property="letterButtons" destination="Ngd-WL-OPK" collectionClass="NSMutableArray" id="GlU-Bd-WSs"/>
+                        <outletCollection property="letterButtons" destination="Uof-hB-MCy" collectionClass="NSMutableArray" id="FS7-G2-Sum"/>
+                        <outletCollection property="letterButtons" destination="RnX-Ei-VCs" collectionClass="NSMutableArray" id="mrP-ZK-xj4"/>
+                        <outletCollection property="letterButtons" destination="esS-9T-XOW" collectionClass="NSMutableArray" id="Hsh-Mx-ATK"/>
+                        <outletCollection property="letterButtons" destination="SGa-8a-Y1f" collectionClass="NSMutableArray" id="KaX-ex-Pba"/>
+                        <outletCollection property="letterButtons" destination="xKl-HP-tJD" collectionClass="NSMutableArray" id="bde-h2-YU7"/>
+                        <outletCollection property="letterButtons" destination="NBf-54-Njq" collectionClass="NSMutableArray" id="Ww8-N4-nbS"/>
+                        <outletCollection property="letterButtons" destination="A0Y-Hv-MSp" collectionClass="NSMutableArray" id="Tg0-rs-5Eb"/>
+                        <outletCollection property="letterButtons" destination="Auv-EV-Xq4" collectionClass="NSMutableArray" id="2lR-1j-Qah"/>
+                        <outletCollection property="letterButtons" destination="vWQ-oe-WGC" collectionClass="NSMutableArray" id="wak-W1-PMW"/>
+                        <outletCollection property="letterButtons" destination="o3w-Tj-KQ5" collectionClass="NSMutableArray" id="jaV-v2-Mgr"/>
+                        <outletCollection property="letterButtons" destination="q37-hG-x3G" collectionClass="NSMutableArray" id="9TV-Le-rT6"/>
+                        <outletCollection property="letterButtons" destination="7oX-DR-pUl" collectionClass="NSMutableArray" id="5TH-kY-gby"/>
+                        <outletCollection property="letterButtons" destination="wk2-a9-4Ps" collectionClass="NSMutableArray" id="1Vi-vs-IsY"/>
+                        <outletCollection property="letterButtons" destination="Yg7-Qs-jq0" collectionClass="NSMutableArray" id="vG6-70-dkc"/>
+                        <outletCollection property="letterButtons" destination="ZY2-48-pPx" collectionClass="NSMutableArray" id="8g4-CV-ivu"/>
+                        <outletCollection property="letterButtons" destination="pjg-3o-AyO" collectionClass="NSMutableArray" id="ga7-36-D20"/>
+                        <outletCollection property="letterButtons" destination="6ax-BX-JIk" collectionClass="NSMutableArray" id="Umd-UY-yeU"/>
+                        <outletCollection property="letterButtons" destination="0xc-9h-xkZ" collectionClass="NSMutableArray" id="MXQ-LR-z6R"/>
+                        <outletCollection property="letterButtons" destination="KpJ-sG-Ddx" collectionClass="NSMutableArray" id="6f2-Cm-HYc"/>
+                        <outletCollection property="letterButtons" destination="aYz-JN-n9T" collectionClass="NSMutableArray" id="o6r-Fr-bCQ"/>
+                        <outletCollection property="letterButtons" destination="iF5-eu-CxY" collectionClass="NSMutableArray" id="3BA-Wg-Max"/>
+                        <outletCollection property="letterButtons" destination="KBx-cR-fAB" collectionClass="NSMutableArray" id="lEv-U4-IzS"/>
+                        <outletCollection property="letterButtons" destination="6lX-fn-f5t" collectionClass="NSMutableArray" id="REF-RS-RRp"/>
+                        <outletCollection property="letterButtons" destination="Rwu-8x-aES" collectionClass="NSMutableArray" id="YRD-7x-28Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJo-zA-LYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="652" y="-133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hangman1" width="200" height="200"/>
+    </resources>
 </document>
